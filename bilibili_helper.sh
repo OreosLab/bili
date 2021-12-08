@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
-#new Env('BILIBILI-HELPER');
+
+# shellcheck disable=SC2188
+<<'COMMENT'
+cron: 59 17 * * *
+new Env('Bilibili 助手');
+COMMENT
 
 if [ -f "$(dirname "$0")/utils_env.sh" ]; then
 	source "$(dirname "$0")/utils_env.sh"
@@ -7,17 +12,12 @@ else
 	wget -q -O utils_env.sh https://ghproxy.com/https://raw.githubusercontent.com/Oreomeow/checkinpanel/master/utils_env.sh
 	source "$(dirname "$0")/utils_env.sh"
 fi
-check_env
+get_some_path
 check_jq_installed_status
 check_java_installed_status
 
-if [ "${pannel}" == "qinglong" ]; then
-	bili_path="/ql/scripts/bilibili"
-	conf_file="/ql/config/java_conf.json"
-elif [ "${pannel}" == "elecv2p" ]; then
-	bili_path="/usr/local/app/script/Shell/checkinpanel/bilibili"
-	conf_file="/usr/local/app/script/Lists/java_conf.json"
-fi
+conf_file="${CONF_PATH}/java_conf.json"
+bili_path="${SCR_PATH}/bilibili"
 
 if [ ! -d "${bili_path}" ]; then
 	mkdir -p "${bili_path}"
