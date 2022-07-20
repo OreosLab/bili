@@ -33,6 +33,8 @@ before_script:
     fi
 
 run:
+  only:
+    - schedules
   stage: run
   script:
     # Configure apt caching
