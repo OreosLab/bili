@@ -1,7 +1,7 @@
 image: ubuntu:latest
 
 variables:
-  REPO_SOURCE: "Oreomeow/bili" # Expect to be at GitHub
+  REPO_SOURCE: "OreosLab/bili" # Expect to be at GitHub
   PACK_NAME: "BILIBILI-HELPER"
   VERSION: "" # Tag names from https://github.com/JunzhouLiu/BILIBILI-HELPER-PRE/tags or "latest" to use the latest commit
   USE_MAVEN: "" # "TRUE" to force packing using maven when running

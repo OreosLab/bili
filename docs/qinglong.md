@@ -1,6 +1,6 @@
 ## 青龙使用教程
 
-**青龙一键拉取命令 `ql raw https://raw.githubusercontent.com/Oreomeow/bili/main/bilibili_helper.sh`**
+**青龙一键拉取命令 `ql raw https://raw.githubusercontent.com/OreosLab/bili/main/bilibili_helper.sh`**
 
 感谢 [issues/51](https://github.com/JunzhouLiu/BILIBILI-HELPER-PRE/issues/51) @graytoowolf 提供的方案。
 
@@ -9,7 +9,7 @@
 
 ### 下载 Release 包备用
 
-点击 [Release](https://github.com/Oreomeow/bili/releases/)，下载名称为 `BILIBILI-HELPER-v2.x.x.zip` 的 zip 压缩包到本地，解压后备用。
+点击 [Release](https://github.com/OreosLab/bili/releases/)，下载名称为 `BILIBILI-HELPER-v2.x.x.zip` 的 zip 压缩包到本地，解压后备用。
 
 ps: 只需要 `BILIBILI-HELPER-v2.x.x.jar` 和 `config.json` 这两个文件。
 

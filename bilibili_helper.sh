@@ -31,7 +31,7 @@ else
 fi
 echo "当前版本:"$VERSION
 
-latest=$(curl -s https://api.github.com/repos/Oreomeow/bili/releases/latest)
+latest=$(curl -s https://api.github.com/repos/OreosLab/bili/releases/latest)
 latest_VERSION=$(echo "$latest" | jq '.tag_name' | sed 's/v\|"//g')
 echo "最新版本:""$latest_VERSION"
 download_url=$(echo "$latest" | jq '.assets[0].browser_download_url' | sed 's/"//g')

@@ -13,13 +13,13 @@
 
 环境变量：
 
-|      key      | 必须 |                                         value                                           |
-| ------------- | ---- | --------------------------------------------------------------------------------------- |
-| `CONFIG` |  是  | `复制下方完整的 config 样例，填好对应的值，直接复制粘贴即可，值的具体含义可在项目 READEME 查看。` |
-| `VERSION` |  否  | `不填或空自动使用最新发布版本；如指定，则填写对应 tag 号；如使用仓库中最新 commit，请填写 latest。` |
-| `USE_MAVEN` |  否  | `值为 TRUE 时强制每次都打包；其他值或不填首先会尝试从 GitHub 仓库 release 中下载 zip 包，失败则打包。` |
-| `REPO_SOURCE` |  否  | `必为 GitHub 仓库，不填或空默认为本仓库（Oreomeow/bili），格式为 ID/仓库名。` |
-| `BUILD_BRANCH` |  否  | `每次使用 Maven 打包时的仓库分支名，不填或空默认为 REPO_SOURCE 中对应仓库设置的的默认分支。` |
+| key            | 必须 | value                                                                                                  |
+| -------------- | ---- | ------------------------------------------------------------------------------------------------------ |
+| `CONFIG`       | 是   | `复制下方完整的 config 样例，填好对应的值，直接复制粘贴即可，值的具体含义可在项目 READEME 查看。`      |
+| `VERSION`      | 否   | `不填或空自动使用最新发布版本；如指定，则填写对应 tag 号；如使用仓库中最新 commit，请填写 latest。`    |
+| `USE_MAVEN`    | 否   | `值为 TRUE 时强制每次都打包；其他值或不填首先会尝试从 GitHub 仓库 release 中下载 zip 包，失败则打包。` |
+| `REPO_SOURCE`  | 否   | `必为 GitHub 仓库，不填或空默认为本仓库（OreosLab/bili），格式为 ID/仓库名。`                          |
+| `BUILD_BRANCH` | 否   | `每次使用 Maven 打包时的仓库分支名，不填或空默认为 REPO_SOURCE 中对应仓库设置的的默认分支。`           |
 
 **config 样例**
 
@@ -82,14 +82,14 @@
 ![](images/gitlab/0.png)
 依次按上图序号点击，创建一个新的 CI/CD 流水线。
 
-如果你希望 CI/CD 流水线内容始终跟随[上游](https://github.com/Oreomeow/bili)，直接将以下内容复制覆盖粘贴到编辑器中。
+如果你希望 CI/CD 流水线内容始终跟随[上游](https://github.com/OreosLab/bili)，直接将以下内容复制覆盖粘贴到编辑器中。
 
 ```yaml
 include:
-  - remote: 'https://github.com/Oreomeow/bili/raw/main/.gitlab-ci.yml'
+  - remote: 'https://github.com/OreosLab/bili/raw/main/.gitlab-ci.yml'
 ```
 
-如果你希望自定义 CI/CD 流水线，可以将本仓库中 [.gitlab-ci.yml](https://github.com/Oreomeow/bili/blob/main/.gitlab-ci.yml) 文件内容复制覆盖粘贴到编辑器中，随后自定义。
+如果你希望自定义 CI/CD 流水线，可以将本仓库中 [.gitlab-ci.yml](https://github.com/OreosLab/bili/blob/main/.gitlab-ci.yml) 文件内容复制覆盖粘贴到编辑器中，随后自定义。
 
 确保编辑后的工作流显示 `此 GitLab CI 配置有效` ，随后点击页面下方 `提交更改` 。
 
